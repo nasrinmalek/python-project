@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<style type="text/css">
+		
+		input[type='submit']{
+            border: 2px solid black;
+            height: 30px;
+            width: 100px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+		}
+
+		input[type='text'],
+		input[type='tel'],
+		input[type='email']{
+			font-size: 20px;
+			border: 2px solid black;
+			border-radius: 5px;
+		}
+		label{
+			font-size: 20px;
+			font-weight: 600;
+
+		}
+
+		div {
+  background-image: url('/static/colorful.jpg');
+}
+
+	
+
+
+	</style>
+</head>
+<center>
+<body >
+  <h1>New Customer Registration Form</h1>
+<div style="border:5px solid black;height: 500px;width: 500px;margin-left: 10px;margin-top: 20px;border-radius: 10px">
+	<center>
+	<form style="margin-top: 50px"  action="/customerlist" method="POST">
+    {% csrf_token %}		
+		
+
+		<label>Customer Name:</label><br>
+		<label><input type="text" name="name"></label>
+	    
+        <br></br>
+
+        <label>Email:</label><br>
+	    	<label><input type="email" name="email"></label>
+	    <br></br>	
+	    
+	    	<label>Contact No.:</label><br>
+	    	<label><input type="tel" name="contact"></label>
+	    
+	    
+        <br></br>
+	    
+	    <label>Customer Address:</label><br>
+	    	<label><input type="text" name="address"></label>
+
+	    
+	    	
+	    
+
+	    <br></br>
+
+	    
+	    	
+	    	<label><input type="submit" value="Submit"></label>
+	    
+	</form>
+	</center>
+</div>
+
+</body>
+</center>
+</html>

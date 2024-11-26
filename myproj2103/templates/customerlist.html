@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+</head>
+<body>
+
+	<h1>Customer List</h1>
+	<ul class="list-group">
+	{% for data_entry in data_list %}
+	<li class="list-group-item">
+    <p>Customer Name : {{ data_entry.name }}</p>
+    <p>Email : {{ data_entry.email }}</p>
+    <p>Contact : {{ data_entry.contact }} </p>
+    <p>Address : {{ data_entry.address }} </p>
+    {% endfor %}
+</li>
+</ul>
+
+
+    </body>
+</html>
